@@ -11,7 +11,7 @@ library(magrittr)
 library(geojsonio)
 ```
 
-## Date: 29 September 2021
+## Date: 29 october 2023
 
 ## Proposed cycle ways in Greater Manchester
 ```{r map, echo = FALSE}
