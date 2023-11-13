@@ -1,1 +1,24 @@
+---
+title: "Data Products: Week 2 Assignment"
+output:
+html_document:
+keep_md: true
+---
 
+```{r setup, echo = FALSE, warning = FALSE, message = FALSE}
+library(leaflet)
+library(magrittr)
+library(geojsonio)
+```
+
+## Date: 29 September 2021
+
+## Proposed cycle ways in Greater Manchester
+```{r map, echo = FALSE}
+beeways <- geojson_read("data/Beeways.geojson", what = "sp")
+leaflet(beeways) %>%
+  addTiles() %>%
+  addPolygons(fill = FALSE, weight = 1, color = "green")
+```
+
+Contains Transport for Greater Manchester data. Contains OS data © Crown copyright and database right 2021.
